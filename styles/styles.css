@@ -1,6 +1,45 @@
+:root {
+  --main-color: #66c05d;
+  --dark-main: #45913e;
+  --main-white-color: #fff;
+  --main-dark-color: #000000;
+  --bg-color: #efefef;
+  --scroll-bg: #f0f1f3;
+  --main-text: #333333;
+  --second-text: #828282;
+  --opacity: 0.6;
+  --transition-time: 250ms;
+  --transition-timing: linear;
+}
+
+/* Roboto font */
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('../fonts/Roboto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('../fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   scroll-behavior: smooth;
-  scrollbar-color: #66c05d #f0f1f3;
+  scrollbar-color: var(--main-color) var(--scroll-bg);
   scrollbar-width: thin;
 }
 
@@ -9,15 +48,15 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #66c05d;
+  background-color: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #45913e;
+  background-color: var(--dark-main);
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #f0f1f3;
+  background-color: var(--scroll-bg);
 }
 
 img {
@@ -43,8 +82,8 @@ h6 {
 }
 
 body {
-  color: #333333;
-  background-color: #efefef;
+  color: var(--main-text);
+  background-color: var(--bg-color);
 
   font-family: Roboto, sans-serif;
   font-size: 14px;
@@ -79,18 +118,18 @@ body {
   text-decoration: none;
 
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .nav__link:hover,
 .nav__link:focus {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 /* Фон по макету */
 .background {
-  background-color: #fff;
+  background-color: var(--main-white-color);
 }
 
 /* Верхняя часть хедера */
@@ -108,14 +147,14 @@ body {
   align-items: center;
 
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
   cursor: pointer;
 }
 
 .logo:hover,
 .logo:focus {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .logo__img {
@@ -125,7 +164,7 @@ body {
 }
 
 .logo__text {
-  color: #66c05d;
+  color: var(--main-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1719;
@@ -135,46 +174,46 @@ body {
 /* Телефон в хедере */
 .header__phone {
   margin-right: 40px;
-  color: #000000;
+  color: var(--main-dark-color);
   font-size: 16px;
   line-height: 1.1718;
   text-decoration: none;
 
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .header__phone:hover,
 .header__phone:focus {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 /* Кнопка звонка в хедере */
 .header__callback {
   padding: 12px 26px 13px 27px;
-  border: 2px solid #66c05d;
+  border: 2px solid var(--main-color);
   border-radius: 40px;
 
-  color: #000000;
+  color: var(--main-dark-color);
   background-color: transparent;
 
-  transition: all 250ms linear;
+  transition: all var(--transition-time) var(--transition-timing);
   cursor: pointer;
 }
 
 .header__callback:hover,
 .header__callback:focus {
-  color: #fff;
-  background-color: #66c05d;
-  transition: all 250ms linear;
+  color: var(--main-white-color);
+  background-color: var(--main-color);
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 /* Линия между хедером */
 .border {
   margin: 0;
   border: none;
-  background-color: #efefef;
+  background-color: var(--bg-color);
   height: 1px;
 }
 
@@ -196,19 +235,19 @@ body {
 }
 
 .menu__link {
-  color: #000000;
+  color: var(--main-dark-color);
   font-size: 16px;
   line-height: 1.1718;
   text-decoration: none;
 
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .menu__link:hover,
 .menu__link:focus {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 /* Герой */
@@ -219,7 +258,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  color: #fff;
+  color: var(--main-white-color);
 }
 
 .hero__title {
@@ -243,23 +282,23 @@ body {
 
   width: 170px;
   padding: 12px 26px 12px 27px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--main-white-color);
   border-radius: 40px;
 
-  color: #ffffff;
+  color: var(--main-white-color);
 
   text-align: center;
   line-height: 1.1721;
   text-decoration: none;
 
-  transition: all 250ms linear;
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 .hero__button:hover,
 .hero__button:focus {
-  background-color: #fff;
-  color: #66c05d;
-  transition: all 250ms linear;
+  background-color: var(--main-white-color);
+  color: var(--main-color);
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 /* Специальные предложения */
@@ -279,7 +318,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.172;
-  color: #000000;
+  color: var(--main-dark-color);
 }
 
 .chairs {
@@ -296,7 +335,7 @@ body {
   margin-left: 30px;
   margin-top: 30px;
   padding: 25px 30px;
-  background-color: #fff;
+  background-color: var(--main-white-color);
 }
 
 .chair__card {
@@ -311,7 +350,6 @@ body {
 .chair__text {
   margin: 0;
   margin-bottom: 20px;
-  color: #333333;
   line-height: 1.4064;
 }
 
@@ -331,30 +369,30 @@ body {
   border: 1px solid transparent;
   border-radius: 30px;
 
-  color: #fff;
-  background-color: #66c05d;
+  color: var(--main-white-color);
+  background-color: var(--main-color);
 
   text-decoration: none;
   letter-spacing: 0.05em;
 
-  transition: all 250ms linear;
+  transition: all var(--transition-time) var(--transition-timing);
   cursor: pointer;
 }
 
 .chair__button:hover,
 .chair__button:focus {
-  border: 1px solid #66c05d;
+  border: 1px solid var(--main-color);
 
-  background-color: #fff;
-  color: #66c05d;
+  background-color: var(--main-white-color);
+  color: var(--main-color);
 
-  transition: all 250ms linear;
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 /* Блоки */
 .boxes {
   display: flex;
-  color: #fff;
+  color: var(--main-white-color);
 }
 
 .boxes__title {
@@ -378,7 +416,7 @@ body {
   margin-right: 30px;
   padding: 35px 45px 35px 40px;
   width: 540px;
-  background-color: #66c05d;
+  background-color: var(--main-color);
 }
 
 .bonus__input {
@@ -396,23 +434,26 @@ body {
 .map {
   width: 540px;
   padding: 35px 45px 35px 40px;
-  background-color: #66c05d;
+  background-color: var(--main-color);
 }
 
 .map__button {
   display: inline-block;
   padding: 9px 28px 9px 29px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--main-white-color);
   border-radius: 30px;
+
   text-decoration: none;
-  color: #fff;
+  color: var(--main-white-color);
+
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 .map__button:hover,
 .map__button:focus {
-  background-color: #fff;
-  color: #66c05d;
-  transition: all 250ms linear;
+  background-color: var(--main-white-color);
+  color: var(--main-color);
+  transition: all var(--transition-time) var(--transition-timing);
 }
 
 /* Футер */
@@ -445,22 +486,22 @@ body {
 
   width: 45px;
   height: 45px;
-  border: 2px solid #66c05d;
+  border: 2px solid var(--main-color);
   border-radius: 100%;
 
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .social__link:hover {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 /* Адрес в футере */
 .footer__adress {
   margin-left: 100px;
-  color: #000000;
+  color: var(--main-dark-color);
   font-style: normal;
 }
 
@@ -470,7 +511,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 25px 0;
-  color: #828282;
+  color: var(--second-text);
 }
 
 .footer__text {
@@ -480,16 +521,16 @@ body {
 }
 
 .footer__link {
-  color: #828282;
+  color: var(--second-text);
   font-size: 12px;
   line-height: 1.1716;
   text-decoration: none;
   opacity: 1;
-  transition: opacity 250ms linear;
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .footer__link:hover,
 .footer__link:focus {
-  opacity: 0.6;
-  transition: opacity 250ms linear;
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
