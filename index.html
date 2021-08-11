@@ -44,6 +44,18 @@
 
             <span class="logo__text">BEAUTY</span>
           </div>
+
+          <div class="search">
+            <input type="text" class="search__input" title="Найти товар" />
+            <img
+              src="./images/search.svg"
+              class="search__icon"
+              alt="search"
+              width="20"
+              height="20"
+            />
+          </div>
+
           <div>
             <a href="tel:88121234567" class="header__phone"
               >8 (812) 123-45-67</a
@@ -97,16 +109,7 @@
 
       <!-- Секция акций -->
       <section class="discounts container">
-        <div class="discounts__head">
-          <h2 class="discounts__title">Специальные предложения</h2>
-
-          <img
-            src="./images/car.svg"
-            width="188.67"
-            height="60.75"
-            alt="машина"
-          />
-        </div>
+        <h2 class="discounts__title">Специальные предложения</h2>
 
         <ul class="chairs">
           <li class="chair">
@@ -174,7 +177,11 @@
             </div>
           </li>
         </ul>
+      </section>
 
+      <!-- Секция бонусов и карты -->
+      <section class="container">
+        <h2 class="visually-hidden">Бонусы и сеть магазинов</h2>
         <div class="boxes">
           <!-- Первый блок -->
           <div class="bonus">
@@ -195,7 +202,7 @@
               <img
                 src="./images/mail.svg"
                 width="140"
-                height="106.54"
+                height="140"
                 alt="Email"
               />
             </div>
@@ -203,20 +210,98 @@
 
           <!-- Второй блок -->
           <div class="map">
-            <h3 class="boxes__title">Заходите к нам</h3>
-            <p class="boxes__text">
-              Более 300 магазинов <br />
-              по всей России
-            </p>
-            <a href="#" class="map__button">Карта магазинов</a>
+            <div>
+              <h3 class="boxes__title">Заходите к нам</h3>
+              <p class="boxes__text">
+                Более 300 магазинов <br />
+                по всей России
+              </p>
+              <a href="#" class="map__button">Карта магазинов</a>
+            </div>
+
+            <div>
+              <img src="./images/car.svg" width="188" height="100" alt="Car" />
+            </div>
           </div>
         </div>
+      </section>
+
+      <!-- Секция просмотренных товаров -->
+      <section class="watched container">
+        <h2 class="discounts__title">Вы недавно смотрели</h2>
+
+        <ul class="chairs">
+          <li class="chair">
+            <div class="chair__card">
+              <img
+                src="./images/chair.jpg"
+                class="chair__img"
+                width="125"
+                height="166"
+                alt="кресло"
+              />
+              <p class="chair__text">
+                Парикмахерское кресло «Норм» гидравлическое
+              </p>
+              <span class="chair__price">9 900 ₽</span>
+              <a href="#" class="chair__button">Купить</a>
+            </div>
+          </li>
+          <li class="chair">
+            <div class="chair__card">
+              <img
+                src="./images/chair.jpg"
+                class="chair__img"
+                width="125"
+                height="166"
+                alt="кресло"
+              />
+              <p class="chair__text">
+                Парикмахерское кресло «Норм» гидравлическое
+              </p>
+              <span class="chair__price">9 900 ₽</span>
+              <a href="#" class="chair__button">Купить</a>
+            </div>
+          </li>
+          <li class="chair">
+            <div class="chair__card">
+              <img
+                src="./images/chair.jpg"
+                class="chair__img"
+                width="125"
+                height="166"
+                alt="кресло"
+              />
+              <p class="chair__text">
+                Парикмахерское кресло «Норм» гидравлическое
+              </p>
+              <span class="chair__price">9 900 ₽</span>
+              <a href="#" class="chair__button">Купить</a>
+            </div>
+          </li>
+          <li class="chair">
+            <div class="chair__card">
+              <img
+                src="./images/chair.jpg"
+                class="chair__img"
+                width="125"
+                height="166"
+                alt="кресло"
+              />
+              <p class="chair__text">
+                Парикмахерское кресло «Норм» гидравлическое
+              </p>
+              <span class="chair__price">9 900 ₽</span>
+              <a href="#" class="chair__button">Купить</a>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 
     <!-- Футер -->
     <footer>
-      <!-- Верхняя частб футера -->
+      <!-- Верхняя часть футера -->
       <div class="footer background">
         <div class="footer__top container">
           <ul class="social__list">
