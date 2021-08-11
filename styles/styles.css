@@ -1,12 +1,13 @@
 :root {
-  --main-color: #66c05d;
-  --dark-main: #45913e;
+  --main-color: #f13c6e;
+  --dark-main: #c2204e;
   --main-white-color: #fff;
   --main-dark-color: #000000;
   --bg-color: #efefef;
   --scroll-bg: #f0f1f3;
   --main-text: #333333;
   --second-text: #828282;
+  --placeholder: #c4c4c4;
   --opacity: 0.6;
   --transition-time: 250ms;
   --transition-timing: linear;
@@ -427,7 +428,7 @@ body {
 }
 
 .bonus__input::placeholder {
-  color: #c4c4c4;
+  color: var(--placeholder);
 }
 
 /* Блок карты */
@@ -510,7 +511,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
   color: var(--second-text);
 }
 
