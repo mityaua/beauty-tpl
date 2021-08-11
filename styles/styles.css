@@ -199,7 +199,8 @@ body {
   color: var(--main-dark-color);
   background-color: transparent;
 
-  transition: all var(--transition-time) var(--transition-timing);
+  transition: background-color var(--transition-time) var(--transition-timing),
+    color var(--transition-time) var(--transition-timing);
   cursor: pointer;
 }
 
@@ -207,7 +208,8 @@ body {
 .header__callback:focus {
   color: var(--main-white-color);
   background-color: var(--main-color);
-  transition: all var(--transition-time) var(--transition-timing);
+  transition: background-color var(--transition-time) var(--transition-timing),
+    color var(--transition-time) var(--transition-timing);
 }
 
 /* Линия между хедером */
