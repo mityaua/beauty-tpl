@@ -146,22 +146,21 @@ body {
 .logo {
   display: flex;
   align-items: center;
-
-  opacity: 1;
-  transition: opacity var(--transition-time) var(--transition-timing);
-  cursor: pointer;
-}
-
-.logo:hover,
-.logo:focus {
-  opacity: var(--opacity);
-  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .logo__img {
   width: 80px;
   height: 80px;
   margin-right: 20px;
+
+  opacity: 1;
+  transition: opacity var(--transition-time) var(--transition-timing);
+}
+
+.logo__img:hover,
+.logo__img:focus {
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 .logo__text {
@@ -170,6 +169,7 @@ body {
   font-size: 36px;
   line-height: 1.1719;
   letter-spacing: 0.1em;
+  user-select: none;
 }
 
 /* Телефон в хедере */
