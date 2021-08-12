@@ -596,6 +596,7 @@ body {
 
   font-size: 18px;
 
+  transition: background-color var(--transition-time) var(--transition-timing);
   outline-color: transparent;
   cursor: pointer;
 }
@@ -603,4 +604,5 @@ body {
 #up:hover,
 #up:focus {
   background-color: var(--second-text);
+  transition: background-color var(--transition-time) var(--transition-timing);
 }
