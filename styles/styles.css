@@ -594,8 +594,6 @@ body {
   background-color: var(--main-color);
   color: var(--main-white-color);
 
-  font-size: 18px;
-
   transition: background-color var(--transition-time) var(--transition-timing);
   outline-color: transparent;
   cursor: pointer;
