@@ -1,6 +1,5 @@
 :root {
   --main-color: #f13c6e;
-  --dark-main: #c2204e;
   --main-white-color: #fff;
   --main-dark-color: #000000;
   --bg-color: #efefef;
@@ -53,7 +52,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--dark-main);
+  background-color: var(--second-text);
 }
 
 *::-webkit-scrollbar-track {
