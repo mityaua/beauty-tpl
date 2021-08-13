@@ -539,6 +539,26 @@ body {
   transition: opacity var(--transition-time) var(--transition-timing);
 }
 
+.social__facebook {
+  width: 20px;
+  height: 20px;
+}
+
+.social__youtube {
+  width: 22px;
+  height: 16px;
+}
+
+.social__vk {
+  width: 28px;
+  height: 16px;
+}
+
+.social__instagram {
+  width: 22px;
+  height: 22px;
+}
+
 /* Адрес в футере */
 .footer__adress {
   margin-left: 100px;
