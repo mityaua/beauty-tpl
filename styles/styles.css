@@ -491,6 +491,44 @@ body {
   transition: all var(--transition-time) var(--transition-timing);
 }
 
+/* Блок брендов */
+.brands {
+  padding-top: 100px;
+}
+
+.brands__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brands__item {
+  display: flex;
+  justify-content: center;
+  flex-basis: calc(100% / 4);
+  border-right: 1px solid var(--bg-color);
+  border-bottom: 1px solid var(--bg-color);
+}
+
+.brands__item:nth-child(4n) {
+  border-right: none;
+}
+
+.brands__item:nth-last-child(-n + 4) {
+  border-bottom: none;
+}
+
+.brands__link {
+  padding: 35px 69px 35px 60px;
+  opacity: 1;
+  transition: opacity var(--transition-time) var(--transition-timing);
+}
+
+.brands__link:hover,
+.brands__link:focus {
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
+}
+
 /* Вы недавно смотрели */
 .watched {
   padding-top: 80px;
