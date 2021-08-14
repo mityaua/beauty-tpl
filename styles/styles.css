@@ -504,6 +504,7 @@ body {
 .brands__item {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-basis: calc(100% / 4);
   border-right: 1px solid var(--bg-color);
   border-bottom: 1px solid var(--bg-color);
