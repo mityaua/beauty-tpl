@@ -536,10 +536,55 @@ body {
   padding-bottom: 80px;
 }
 
-/* Футер */
-.footer {
-  padding-top: 37px;
-  padding-bottom: 38px;
+/* Меню в футере */
+.footmenu {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footmenu__item {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc((100% - 30px) / 4);
+}
+
+.footmenu__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footmenu__title {
+  width: 99px;
+  padding-bottom: 30px;
+
+  color: var(--main-dark-color);
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4062;
+}
+
+.submenu__list {
+  padding-top: 25px;
+  border-top: 1px solid var(--bg-color);
+}
+
+.submenu__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.submenu__link {
+  color: var(--second-text);
+  text-decoration: none;
+
+  opacity: 1;
+  transition: opacity var(--transition-time) var(--transition-timing);
+}
+
+.submenu__link:hover,
+.submenu__link:focus {
+  opacity: var(--opacity);
+  transition: opacity var(--transition-time) var(--transition-timing);
 }
 
 /* Верхняя часть футера */
@@ -547,6 +592,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 37px;
+  padding-bottom: 38px;
 }
 
 /* Иконки соц сетей */
