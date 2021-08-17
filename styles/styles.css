@@ -297,11 +297,23 @@ body {
 .hero {
   padding-top: 160px;
   padding-bottom: 193px;
-  background-image: url('../images/hero_bg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   color: var(--main-white-color);
+  background-color: var(--main-color);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url('../images/hero_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
 
 .hero__title {
@@ -315,9 +327,13 @@ body {
 .hero__text {
   margin: 0;
   margin-bottom: 50px;
-  max-width: 308px;
-
   line-height: 1.4285;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__text {
+    max-width: 308px;
+  }
 }
 
 .hero__button {
