@@ -531,9 +531,11 @@ body {
   padding-top: 100px;
 }
 
-.brands__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .brands__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .brands__item {
@@ -700,20 +702,34 @@ body {
 
 /* Нижняя часть футера */
 .footer__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
   color: var(--second-text);
 }
 
+@media screen and (min-width: 768px) {
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* Копирайт в футере */
 .footer__text {
   font-size: 12px;
   line-height: 1.1716;
   margin: 0;
+  margin-bottom: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__text {
+    margin-bottom: 0;
+  }
+}
+
+/* Политика в футере */
 .footer__link {
   color: var(--second-text);
   font-size: 12px;
