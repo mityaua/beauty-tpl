@@ -104,9 +104,15 @@ body {
 
 /* Контейнер */
 .container {
-  max-width: 1110px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1110px;
+  }
 }
 
 /* Верхняя навигация */
@@ -352,20 +358,49 @@ body {
   color: var(--main-dark-color);
 }
 
-.chairs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin-left: -30px;
-  margin-top: -30px;
+/* Список с креслами */
+@media screen and (min-width: 768px) {
+  .chairs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
 }
 
+@media screen and (min-width: 1366px) {
+  .chairs {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Элемент списка - кресло */
 .chair {
-  flex-basis: calc((100% - 90px) / 4);
-  margin-left: 30px;
-  margin-top: 30px;
   padding: 25px 30px;
   background-color: var(--main-white-color);
+}
+
+.chair:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .chair {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+
+  .chair:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .chair {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .chair__card {
