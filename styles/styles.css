@@ -531,6 +531,7 @@ body {
   padding-top: 100px;
 }
 
+/* Список брендов */
 @media screen and (min-width: 768px) {
   .brands__list {
     display: flex;
@@ -538,23 +539,47 @@ body {
   }
 }
 
+/* Элемент списка брендов */
 .brands__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-basis: calc(100% / 4);
-  border-right: 1px solid var(--bg-color);
-  border-bottom: 1px solid var(--bg-color);
   box-shadow: none;
   transition: box-shadow var(--transition-time) var(--transition-timing);
 }
 
-.brands__item:nth-child(4n) {
-  border-right: none;
+.brands__item:not(:last-child) {
+  border-bottom: 1px solid var(--bg-color);
 }
 
-.brands__item:nth-last-child(-n + 4) {
-  border-bottom: none;
+@media screen and (min-width: 768px) {
+  .brands__item {
+    flex-basis: calc(100% / 2);
+    border-right: 1px solid var(--bg-color);
+    border-bottom: 1px solid var(--bg-color);
+  }
+
+  .brands__item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .brands__item:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .brands__item {
+    flex-basis: calc(100% / 4);
+  }
+
+  .brands__item:nth-child(4n) {
+    border-right: none;
+  }
+
+  .brands__item:nth-last-child(-n + 4) {
+    border-bottom: none;
+  }
 }
 
 .brands__item:hover,
