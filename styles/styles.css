@@ -472,8 +472,13 @@ body {
 
 /* Блоки */
 .boxes {
-  display: flex;
   color: var(--main-white-color);
+}
+
+@media screen and (min-width: 768px) {
+  .boxes {
+    display: flex;
+  }
 }
 
 .boxes__title {
@@ -494,10 +499,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-right: 30px;
+  margin-bottom: 30px;
   padding: 35px 45px 35px 40px;
-  width: 540px;
   background-color: var(--main-color);
+}
+
+@media screen and (min-width: 768px) {
+  .bonus {
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: 540px;
+  }
+}
+
+.bonus__img {
+  display: none;
+}
+
+@media screen and (min-width: 1366px) {
+  .bonus__img {
+    display: block;
+  }
 }
 
 .bonus__input {
@@ -518,9 +540,25 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  width: 540px;
   padding: 35px 45px 35px 40px;
+
   background-color: var(--main-color);
+}
+
+.map__img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .map {
+    width: 540px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .map__img {
+    display: block;
+  }
 }
 
 .map__button {
