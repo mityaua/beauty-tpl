@@ -152,17 +152,31 @@ body {
 /* Верхняя часть хедера */
 .header__top {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+@media screen and (min-width: 1366px) {
+  .header__top {
+    flex-direction: row;
+  }
+}
+
 /* Логотип */
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 80px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1366px) {
+  .logo {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
 }
 
 .logo__img {
@@ -196,11 +210,18 @@ body {
 
 .search__input {
   width: 250px;
+  margin-bottom: 15px;
   padding: 10px 20px 10px 45px;
   border: none;
   border-radius: 40px;
   background-color: var(--bg-color);
   outline-color: transparent;
+}
+
+@media screen and (min-width: 1366px) {
+  .search__input {
+    margin-bottom: 0;
+  }
 }
 
 .search__icon {
@@ -212,9 +233,15 @@ body {
   cursor: pointer;
 }
 
+/* Обёртка для обратной связи */
+.callback__wrapper {
+  text-align: center;
+}
+
 /* Телефон в хедере */
 .header__phone {
-  margin-right: 40px;
+  display: block;
+  margin-bottom: 15px;
   color: var(--main-dark-color);
   font-size: 16px;
   line-height: 1.1718;
@@ -228,6 +255,14 @@ body {
 .header__phone:focus {
   opacity: var(--opacity);
   transition: opacity var(--transition-time) var(--transition-timing);
+}
+
+@media screen and (min-width: 1366px) {
+  .header__phone {
+    display: inline;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
 }
 
 /* Кнопка звонка в хедере */
@@ -735,16 +770,30 @@ body {
 /* Верхняя часть футера */
 .footer__top {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 37px;
   padding-bottom: 38px;
 }
 
+@media screen and (min-width: 1366px) {
+  .footer__top {
+    flex-direction: row;
+  }
+}
+
 /* Иконки соц сетей */
 .social__list {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1366px) {
+  .social__list {
+    margin-bottom: 0;
+  }
 }
 
 .social__item:not(:last-child) {
@@ -792,9 +841,16 @@ body {
 
 /* Адрес в футере */
 .footer__adress {
-  margin-left: 100px;
+  margin-bottom: 15px;
   color: var(--main-dark-color);
   font-style: normal;
+}
+
+@media screen and (min-width: 1366px) {
+  .footer__adress {
+    margin-left: 100px;
+    margin-bottom: 0;
+  }
 }
 
 /* Нижняя часть футера */
